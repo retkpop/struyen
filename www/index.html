@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="android android-4 android-4-4">
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+		<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>STRUYEN.NET</title>
+        <link href="css/framework7.ios.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/framework7.ios.colors.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/framework7-icons.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/themes1.css" rel="stylesheet" type="text/css"/>
+        <link href="css/my-app.css" rel="stylesheet" type="text/css"/>
+        <link href="css/framework7.3dpanels.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- Status bar overlay for full screen mode (PhoneGap) -->
+        <div class="statusbar-overlay"></div>
+        <div class="panel panel-left panel-reveal">
+            <div class="view">
+                <div class="pages">
+                    <div class="navbar_left page">
+                        <div class="nav page-content">
+                            <div class="list-block">
+                                <div class="name">Danh mục</div>
+                                <div class="get_menu">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-nav">Copyright © 2016 - CMA.VN Vietnam Ltd (KieuTam)., All Rights Reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Views -->
+        <div class="views">
+            <!-- Your main view, should have "view-main" class -->
+            <div class="view view-main">
+                <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+                <div class="pages navbar-through toolbar-through">
+                    <!-- Page, "data-page" contains page name -->
+                    <div data-page="index" class="page index">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+
+                                <div class="left">
+                                    <a data-panel="left" class="open-panel refresh-click link">
+                                        <i class="fa fa-bars" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                                <div class="center sliding i18n" data-i18n="app.name">STRUYEN.NET</div>
+
+<!--                                <div class="right get-page">
+                                    <a href="page.html?slug=gioi-thieu" class="item-link open-send-popup link icon-only">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </a>
+                                </div>-->
+
+                            </div>
+                        </div>
+                        <!-- Scrollable page content -->
+                        <div class="page-content infinite-scroll pull-to-refresh-content hide-bars-on-scroll" data-ptr-distance="55">
+                            <div class="pull-to-refresh-layer">
+                                <div class="pull-to-refresh-arrow"></div>
+                            </div>
+                            <div class="list-block">
+                                <ul id="listPost">
+
+                                </ul>
+                            </div>
+                            <div class="infinite-scroll-preloader">
+                                <div class="preloader preloader-green"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Path to Framework7 Library JS-->
+        <script src="js/framework7.min.js" type="text/javascript"></script>
+        <script src="js/framework7.3dpanels.js" type="text/javascript"></script>
+        <!-- Path to your app js-->
+        <script src="js/my-app.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			function checkConnection() {
+				var networkState = navigator.connection.type;
+			 
+				var states = {};
+				states[Connection.NONE]     = 'No network connection';
+				myApp.addNotification({
+					title: states[networkState],
+					message: 'Struyen cập nhật bài viết theo thời gian thực, vui lòng kiểm tra kết nối từ thiết bị của bạn'
+				});
+			}
+			checkConnection();
+		</script>
+        <script>
+            var myApp = new Framework7({swipePanel: 'left'});
+            var mainView = myApp.addView('.view-main');
+        </script>
+        <script>
+            var myApp = new Framework7({
+                template7Pages: true, //enable Template7 rendering for pages
+                fastClicks:false,
+                template7Data: {
+                    // This context will applied for page/template with "about.html" URL
+                }
+            });
+        </script>
+    </body>
+</html>

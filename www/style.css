@@ -1,0 +1,270 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 18, 2016, 1:18:17 PM
+    Author     : Tâm
+*/
+
+/* Default Status bar background */
+.statusbar-overlay {
+    background: #369da9;
+    /* We can add transition for smooth color animation */
+    -webkit-transition: 400ms;
+    transition: 400ms;
+}
+.footer-nav {
+    padding: 5px 10px;
+    font-size: 12px;
+    background: rgb(106, 132, 86);
+    color: rgba(255, 255, 255, 0.48);
+    margin-top: -42px;
+    position: relative;
+    z-index: 999;
+    border-top: 1px solid #658e48;
+}
+.single .toolbar-ads {
+    padding: 0;
+}
+/* Change Status bar background when panel opened */
+body.with-panel-left-cover .statusbar-overlay {
+    background: #222;
+}
+.infinite-scroll-preloader {
+    margin-top:-20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.single .picker-modal, .category .picker-modal {
+    position: fixed;
+    background: #fff;
+    height: auto;
+}
+.single .toolbar-info, .category .toolbar-info {
+    padding: 10px;
+    background: #369da9;
+    overflow: hidden;
+    position: relative;
+}
+.toolbar-info .f7-icons, .toolbar-info .framework7-icons, .category .toolbar-info .framework7-icons {
+    font-size: 16px;
+}
+.single .toolbar-info .left, .category .toolbar-info .left {
+    float: left;
+}
+.single .toolbar-info .right, .category .toolbar-info .right {
+    float: right;
+}
+.single .toolbar-info a, .single .toolbar-info i, .category .toolbar-info a, .category .toolbar-info i {
+    color: #fff;
+}
+.single .list-info .info h4, .category .list-info h4  {
+    margin: 0 0 10px 0;
+}
+.single .list-info .info p, .category .list-info .info p {
+    margin: 6px 0;
+}
+.single .list-info .info p.buttons-row, .category .list-info .info p.buttons-row {
+    max-width: 100px;
+    margin: 15px auto;
+}
+.single .list-info .info, .category .list-info .info {
+    padding: 10px 10px 50px;
+}
+.infinite-scroll-preloader .preloader {
+    width:34px;
+    height:34px;
+}
+.navbar_left {
+    position: relative;
+}
+.navbar_left:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #fff url('img/bgnav.png') center center no-repeat;
+    background-size: 100% 100%;
+    -webkit-filter: blur(40px);
+    -moz-filter: blur(40px);
+    -o-filter: blur(40px);
+    -ms-filter: blur(40px);
+    filter: blur(40px);
+}
+.navbar_left .nav {
+    padding-bottom: 42px;
+    background-image: -webkit-linear-gradient(to top right, #e7c788 0%, rgba(2, 119, 5, 0.69) 0%, rgba(175, 63, 63, 0.51) 90%);
+    background-image: -moz-linear-gradient(to top right, #e7c788 0%, rgba(2, 119, 5, 0.69) 0%, rgba(175, 63, 63, 0.51) 90%);
+    background-image: -o-linear-gradient(to top right, #e7c788 0%, rgba(2, 119, 5, 0.69) 0%, rgba(175, 63, 63, 0.51) 90%);
+    background-image: linear-gradient(to top right, #e7c788 0%, rgba(2, 119, 5, 0.69) 0%, rgba(175, 63, 63, 0.51) 90%);
+}
+.toolbar-through .page-content {
+    padding-bottom: 0;
+}
+.navbar_left .nav .list-block {
+    margin: 0;
+}
+.list-block {
+    margin-top: 0;
+}
+.single .content-block, .category .content-block {
+    margin: 0;
+    padding: 0;
+}
+blockquote {
+    margin: 0;
+    padding: 1px 10px;
+    background: #369da9;
+    color: #fff;
+}
+.single .content-block-inner, .category .content-block-inner {
+    padding: 10px 0;
+    margin-left: 0;
+}
+.navbar_left .nav .list-block .item-title {
+    color: #fff;
+}
+.navbar_left .nav .list-block .name {
+    padding: 12px 18px;
+    background: #f78320;
+    color: #fff;
+}
+.navbar_left .nav .list-block ul {
+    background: none;
+    padding: 0 0 0 10px;
+}
+.navbar_left .nav .list-block ul li {
+    padding: 0 7px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.navbar_left .nav .list-block ul:before {
+    display: none;
+}
+.list-block {
+    font-size: 14px;
+}
+.list-block ul ul.sub {
+    padding-left: 20px;
+    display: none;
+}
+.list-block ul ul.sub.show {
+    display: block;
+}
+.list-block ul li.dropdown {
+    position: relative;
+}
+.list-block ul li.dropdown .show_sub.upto .fa {
+    transform: rotate(180deg);
+}
+/* rgba(0, 0, 0, 0.06); */
+.list-block .item-link.active-state {
+    background: rgba(0, 0, 0, 0.06);
+}
+.list-block ul li.dropdown .show_sub {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    z-index: 9999;
+    cursor: pointer;
+    padding: 14px;
+    line-height: normal;
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+.navbar_left .nav .list-block ul li ul.sub li:last-child {
+    border-bottom: none;
+}
+.navbar_left .nav .list-block ul li.dropdown:before {
+    content: '';
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
+}
+.navbar {
+    background: #369da9;
+    color: #fff;
+}
+.navbar a.link {
+    color: #fff;
+}
+.navbar .right a {
+    font-size: 18px;
+    display: inline-block;
+    padding: 0 5px;
+}
+.page-content img {
+    max-width: 100%;
+    height: auto !important;
+}
+.list-block ul:after {
+    display: none;
+}
+.list-block .item-content {
+    padding-left: 0;
+}
+.list-block ul:before {
+    display: none;  
+}
+.list-block .item-inner {
+    display: block;
+}
+.list-block .item-link .item-inner {
+    padding: 8px 15px;
+    background-image: none;
+}
+.img-responsive {
+    width: 87px;
+    height: 87px;
+}
+.list-block .item-content .item-inner .thumbnail {
+    float: left;
+    margin-right: 10px;
+    max-width: 87px;
+    max-height: 87px;
+    overflow: hidden;
+}
+.list-block .item-content .item-inner .item-title {
+    font-size: 14px;
+    color: #ff9630;
+    margin-bottom: 3px;
+}
+.list-block .item-content .item-inner .excerpt {
+    padding-top: 3px;
+    margin-top: 3px;
+    overflow: hidden;
+    font-size: 13px;
+    color: #6b6b6b;
+}
+.kt-date:before {
+    content: '\f073';
+    font-family: 'FontAwesome';
+    margin-right: 5px;
+}
+.kt-date {
+    font-size: 12px;
+    color: #8e8e93;
+}
+.single .page-content img {
+    max-width: 100%;
+    height: auto !important;
+}
+.single .page-content {
+    padding: 43px 0 60px 0;
+}
+.single .page-content .title {
+    padding: 0 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #c0c0c0;
+}
+.single .page-content .content {
+    padding: 0 15px;
+    color: #363636;
+}
