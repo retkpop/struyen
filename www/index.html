@@ -20,6 +20,7 @@
         <link href="css/framework7.3dpanels.min.css" rel="stylesheet" type="text/css"/>
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
     </head>
     <body>
         <!-- Status bar overlay for full screen mode (PhoneGap) -->
@@ -92,19 +93,6 @@
         <script src="js/framework7.3dpanels.js" type="text/javascript"></script>
         <!-- Path to your app js-->
         <script src="js/my-app.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			function checkConnection() {
-				var networkState = navigator.connection.type;
-			 
-				var states = {};
-				states[Connection.NONE]     = 'No network connection';
-				myApp.addNotification({
-					title: states[networkState],
-					message: 'Struyen cập nhật bài viết theo thời gian thực, vui lòng kiểm tra kết nối từ thiết bị của bạn'
-				});
-			}
-			checkConnection();
-		</script>
         <script>
             var myApp = new Framework7({swipePanel: 'left'});
             var mainView = myApp.addView('.view-main');

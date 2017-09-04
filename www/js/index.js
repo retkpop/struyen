@@ -17,6 +17,17 @@
  * under the License.
  */
 var app = {
+	function checkConnection() {
+		var networkState = navigator.connection.type;
+	 
+		var states = {};
+		states[Connection.NONE]     = 'No network connection';
+		myApp.addNotification({
+			title: states[networkState],
+			message: 'Struyen cập nhật bài viết theo thời gian thực, vui lòng kiểm tra kết nối từ thiết bị của bạn'
+		});
+	}
+	checkConnection();
     // Application Constructor
     initialize: function() {
         this.bindEvents();
